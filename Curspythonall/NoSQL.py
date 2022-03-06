@@ -1,0 +1,1 @@
+cluster "mongodb+srv://root:<password>@cluster0.bzejb.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"

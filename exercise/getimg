@@ -1,0 +1,10 @@
+import numpy as np
+from PIL import Image
+
+img = Image.open('img.jpg')
+
+arr = np.array(img)
+
+
+arr[20,30]
+print [arr]

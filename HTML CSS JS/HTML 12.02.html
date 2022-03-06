@@ -1,10 +1,153 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
-</head>
+<!--tagul de html este primul tag si contine toata structura paginii-->
+<html xmlns="http://www.w3.org/1999/html">
+<!--in head definim in principal titlul paginii care apare pe tab si tot aici se fac linkurile spre fisierele CSS(obligatoriu)-->
+<link>
+    <title>My first page2!</title>
+
+    <link rel="stylesheet" href="../CSS/class_demo.css">
+
+<!--body reprezinta tot ce e viszibil in pagina noastra-->
+<!--o sa cuprinda toate elementele si structura paginii-->
 <body>
-$END$
+<main id="main">
+    <header>
+        asd
+        asd
+        asd
+        asd
+    </header>
+    <div style="text-align: center;color: #00ffb7;width: 50%">
+        <!--avem 6 tipuri de taguri pentru headere/titluri difera doar marimea intre ele-->
+        <h1><i>header 1</i></h1>
+        <h2>header 2</h2>
+        <h3>header 3</h3>
+        <h4>header 4</h4>
+        <h5>header 5</h5>
+        <h6>header 6</h6>
+    </div>
+
+    <!--cu tagul de p definim un paragraf din pagina-->
+    <p>Acesta este <b>primul</b> meu <i>paragraf</i>!</p>
+
+    <!--text ingrosat-->
+    <b>aceste text este ingrosat cu b</b>
+    <br>
+    <strong>acest text este important</strong>
+    <br>
+
+    <!--text inclinat-->
+    <i>acest text este inclinat</i>
+    <br>
+    <em>acest text este tot inclinat dar mai important</em>
+    <br>
+
+    <!--tagul de <br> ne ajuta sa ducem pe o noua linie elemnetul urmator-->
+    <!--avem elemente de tipul block care ocupa tot spatiul din pagina de la stanga la dreapta(h1,2,3..,p,div)-->
+    <!--avem elemente de tipul inline care ocupa doar spatiul necesar pentru textul continut(b,strong,i,em...)-->
+
+    <!--cu ajutorul tagului <a> creeam linkuri-->
+    <!--in atributul de href specificam linkul-->
+    <!--cu atributul de target putem specifica daca vrem ca linkul sa se deschida intr-un tab nou-->
+    <a href="https://google.com" target="_blank">Link spre google!</a>
+    <br>
+    <a href="https://google.com" target="_blank">
+        <button>Click me!</button>
+    </a>
+    <a href="https://google.com" target="_blank"><img src="../poze/img_nature.jpg" width="200px" alt="poza cu dealuri"></a>
+    <br>
+    <!--cu ajutorul tagului img putem adauga poze in site-->
+    <!--atributul src este obligatoriu si reprezinta calea spre poza/adresa web a unei poze-->
+    <img src="../poze/img_nature.jpg" width="200px" alt="poza cu dealuri">
+    <img src="https://s13emagst.akamaized.net/products/30716/30715144/images/res_21988422280bc0a132f5ec1521da5ec6.jpg"
+         width="400px" alt="poza cu femeie">
+
+    <!--cu ul creeam liste neordonate (cu buline)-->
+    <ul>
+        <li class="1">element 1</li>
+        <li>element 2</li>
+        <li>element 3</li>
+        <ul>
+            <li>subelem 4</li>
+            <li>subelem 5</li>
+            <ol>
+                <li>element 1</li>
+                <li>element 2</li>
+                <li>element 3</li>
+            </ol>
+        </ul>
+    </ul>
+
+<script src="JS/JS demo.js"
+
+    ></script>
+    <!--cu ol creeam liste cu cifre in fata-->
+    <ol>
+        <li>element 1</li>
+        <li>element 2</li>
+        <li>element 3</li>
+    </ol>
+
+    <table border="7">
+        <thead>
+            <tr>
+                <th>nume</th>
+                <th colspan="2">prenume</th>
+                <th>varsta</th>
+            </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td rowspan="2">Cobuz</td>
+            <td>Valentin</td>
+            <td>gheorghe</td>
+            <td>34</td>
+        </tr>
+        <tr>
+            <td>Ion</td>
+            <td>Vasile</td>
+            <td>22</td>
+        </tr>
+
+        </tbody>
+    </table>
+<br><br>
+<!--<form> ne ajuta sa creeam formulare
+action defineste pagina sau ce sa se intample dupa trimiterea formularului
+method descrie metoda HTTP prin care se face trimiterea fomularului
+-->
+    <div style="height: 4000px">
+    <form action="index.html" method="post">
+<!--prin tagul <input> putem creea diferite elemente, atributul type face diferenta intre ele -->
+<!--atributul name ne ajuta sa identificam in backend valoarea introdusa de client-->
+<!--atributul placeholder ne ajuta sa sugeram clientuli ce ar trebui sa completeze in acel camp-->
+<!--adaugand atributul required nu lasam clintul sa fac submit la formular fara sa completeze/selecteze o valoare-->
+        <label for="username">Username: </label>
+        <input type="text" name="username" placeholder="username" id="username" required>
+
+        <input type="password" name="password" placeholder="password" required>
+        <br><br>
+        <textarea rows="7" cols="20" name="comments" placeholder="insert comments here..."></textarea>
+        <br><br>
+        <select name="city" required>
+            <option value="" selected disabled>Select a city..</option>
+            <option value="new_york">New York oras frumos</option>
+            <option value="berlin">Berlin</option>
+            <option value="london">London</option>
+        </select>
+        <br><br>
+        <label id="terms" for="accept_terms">I accept the terms and conditions!</label>
+        <input type="checkbox" name="terms" id="accept_terms" class="1" required>
+        <br><br>
+        <input type="radio" name="sex" value="male">Male
+        <input type="radio" name="sex" value="female">Female
+        <input type="radio" name="sex" value="neutru">Neutru
+        <br><br>
+        Please select the CV <input type="file" name="cv">
+        <br><br>
+        <input type="submit" value="login">
+    </form>
+        </div>
+</main>
 </body>
 </html>
